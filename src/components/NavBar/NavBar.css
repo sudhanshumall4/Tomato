@@ -1,0 +1,70 @@
+.navbar
+{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo
+{
+    width: 150px;
+    margin-left: 10px;
+}
+.navbar-menu
+{
+   display: flex;
+   list-style: none;
+   gap: 20px;
+   color: #49557e;
+   font-size: 18px; 
+   cursor: pointer;
+}
+.navbar-right
+{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+.navbar button:hover {
+    background: tomato;
+    color: white;
+    border-color: tomato;
+}
+.navbar-menu li {
+    cursor: pointer;
+    padding-bottom: 5px; /* Space for the underline */
+    transition: 0.3s ease-in-out;
+  }
+  
+  .navbar-menu li.active {
+    border-bottom: 2px solid tomato; /* Underline effect */
+    font-weight: bold;
+  }
+  .navbar li{
+    cursor: pointer ;
+  }
+  .navbar-search-icon
+  {
+    position: relative;
+  }
+  .navbar-search-icon .dot
+  {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+    
+  }
