@@ -1,7 +1,6 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react'; // ✅ Added useEffect
 import { food_list } from "../assets/assets";
 
-// Create context
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
@@ -16,7 +15,7 @@ const StoreContextProvider = (props) => {
 
   const removeFromCart = (itemId) => {
     setCartItems((prev) => {
-      if (!prev[itemId]) return prev; // prevent negative values or undefined errors
+      if (!prev[itemId]) return prev;
       const updatedCart = { ...prev, [itemId]: prev[itemId] - 1 };
       if (updatedCart[itemId] === 0) {
         delete updatedCart[itemId];
@@ -25,10 +24,13 @@ const StoreContextProvider = (props) => {
     });
   };
 
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
+
   const contextValue = {
     food_list,
     cartItems,
-    setCartItems,
     addToCart,
     removeFromCart
   };

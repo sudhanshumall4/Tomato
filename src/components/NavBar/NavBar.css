@@ -40,6 +40,18 @@
     color: white;
     border-color: tomato;
 }
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.navbar a:hover {
+  color: tomato;
+  transition: 0.3s ease;
+}
+
 .navbar-menu li {
     cursor: pointer;
     padding-bottom: 5px; /* Space for the underline */
@@ -67,4 +79,55 @@
     top: -8px;
     right: -8px;
     
+  }
+  @media (max-width:1050px)
+  {
+    .navbar .logo{
+      width: 140px;
+    }
+    .navbar-menu{
+      gap: 20px;
+      font-size: 17px;
+    }
+    .navbar-right
+    {
+      gap: 30px;
+    }
+    .navbar-right img
+    {
+      width: 22px;
+    }
+    .navbar-right button
+    {
+      padding: 8px 25px;
+    }
+  }
+  @media (max-width:900px)
+  {
+    .navbar .logo{
+      width: 120px;
+    }
+    .navbar-menu{
+      gap: 15px;
+      font-size: 16px;
+    }
+    .navbar-right
+    {
+      gap: 20px;
+    }
+    .navbar-right img
+    {
+      width: 20px;
+    }
+    .navbar-right button
+    {
+      padding: 7px 20px;
+      font-size: 15px;
+    }
+  }
+  @media (max-width:750px)
+  {
+    .navbar-menu{
+     display:none
+    }
   }
