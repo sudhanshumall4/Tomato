@@ -69,16 +69,24 @@
   {
     position: relative;
   }
-  .navbar-search-icon .dot
-  {
+  .navbar-search-icon .dot {
     position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: tomato;
-    border-radius: 5px;
     top: -8px;
     right: -8px;
-    
+    background-color: tomato;
+    color: white;
+    min-width: 18px;
+    height: 18px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    z-index: 2;
   }
   @media (max-width:1050px)
   {
@@ -102,32 +110,99 @@
       padding: 8px 25px;
     }
   }
-  @media (max-width:900px)
-  {
-    .navbar .logo{
-      width: 120px;
+  @media (max-width: 1050px) {
+    .navbar .logo {
+      width: 130px;
     }
-    .navbar-menu{
-      gap: 15px;
+  
+    .navbar-menu {
+      gap: 16px;
       font-size: 16px;
     }
-    .navbar-right
-    {
-      gap: 20px;
+  
+    .navbar-right {
+      gap: 24px;
     }
-    .navbar-right img
-    {
+  
+    .navbar-right img {
       width: 20px;
     }
-    .navbar-right button
-    {
-      padding: 7px 20px;
+  
+    .navbar-right button {
+      padding: 8px 22px;
       font-size: 15px;
     }
   }
-  @media (max-width:750px)
-  {
-    .navbar-menu{
-     display:none
+  
+  @media (max-width: 900px) {
+    .navbar {
+      flex-direction: row;
+      padding: 16px 10px;
+    }
+  
+    .navbar .logo {
+      width: 110px;
+    }
+  
+    .navbar-menu {
+      gap: 14px;
+      font-size: 15px;
+    }
+  
+    .navbar-right {
+      gap: 16px;
+    }
+  
+    .navbar-right img {
+      width: 18px;
+    }
+  
+    .navbar-right button {
+      padding: 6px 18px;
+      font-size: 14px;
+    }
+  
+    .navbar-search-icon .dot {
+      top: -6px;
+      right: -6px;
+      min-width: 16px;
+      height: 16px;
+      font-size: 10px;
     }
   }
+  
+  @media (max-width: 750px) {
+    .navbar {
+      justify-content: space-between;
+    }
+  
+    .navbar-menu {
+      display: none;
+    }
+  
+    .navbar .logo {
+      width: 100px;
+    }
+  
+    .navbar-right {
+      gap: 14px;
+    }
+  
+    .navbar-right button {
+      padding: 5px 16px;
+      font-size: 13px;
+    }
+  
+    .navbar-right img {
+      width: 16px;
+    }
+  
+    .navbar-search-icon .dot {
+      top: -5px;
+      right: -5px;
+      min-width: 14px;
+      height: 14px;
+      font-size: 9px;
+    }
+  }
+  

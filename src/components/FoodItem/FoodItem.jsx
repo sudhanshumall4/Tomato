@@ -1,20 +1,19 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import './FoodItem.css';
 import { assets } from '../../assets/assets';
 import { StoreContext } from '../../context/StoreContext';
 
 const FoodItem = ({ id, name, price, description, image }) => {
-  const [itemCount, setItemCount] = useState(0);
-  const { cartItems, addToCart, removedFromCart } = useContext(StoreContext);
+  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
+
+  const itemCount = cartItems[id] || 0;
 
   const handleAdd = () => {
     addToCart(id);
-    setItemCount(prev => prev + 1);
   };
 
   const handleRemove = () => {
-    removedFromCart(id);
-    setItemCount(prev => prev - 1);
+    removeFromCart(id);
   };
 
   return (
